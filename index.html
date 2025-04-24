@@ -96,14 +96,14 @@ opacity: 0.8;
 		// function to style my choropleth map
 		function style1 (feature) {
 			d = feature.properties.PERCENT_OBESE_;
-			answer = d > 40 ? 'rgb(0,90,50)' :
-                                 d > 35 ? 'rgb(35,139,69)' :
-                                 d > 30 ? 'rgb(65,171,93)' :
-                                 d > 25 ? 'rgb(116,196,118)' :
-                                 d > 20  ? 'rgb(161,217,155)' :
-                                 d > 15  ? 'rgb(199,233,192)' :
-                                 d > 10  ? 'rgb(237,248,233)' :
-                                          'rgb(247,252,245)';
+			answer = d > 40 ? 'rgb(12,44,132)' :
+                                 d > 35 ? 'rgb(34,94,168)' :
+                                 d > 30 ? 'rgb(29,145,192)' :
+                                 d > 25 ? 'rgb(65,182,196)' :
+                                 d > 20  ? 'rgb(127,205,187)' :
+                                 d > 15  ? 'rgb(199,233,180)' :
+                                 d > 10  ? 'rgb(237,248,177)' :
+                                          'rgb(255,255,217)';
 
 			styleReturn = {
 				fillColor : answer,
@@ -145,8 +145,8 @@ $.getJSON('https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/OD
             var legend = L.control({position: 'bottomright'}); 
 	    legend.onAdd = function(map) {
 		    var div = L.DomUtil.create('div', 'info legend');
-		    colors = ['rgb(247,252,245)', 'rgb(237,248,233)', 'rgb(199,233,192)', 'rgb(161,217,155)', 'rgb(116,196,118)', 'rgb(65,171,93)', 
-			      'rgb(35,139,69)', 'rgb(0,90,50)' ];
+		    colors = ['rgb(255,255,217)', 'rgb(237,248,177)', 'rgb(199,233,180)', 'rgb(127,205,187)', 'rgb(65,182,196)', 'rgb(29,145,192)', 
+			      'rgb(34,94,168)', 'rgb(12,44,132)' ];
 		    labels = ['0-10%', '10-15%', '15-20%', '20-25%', '25-30%',
 			     '30-35%', '35-40%', '40%'];
 		    
