@@ -122,7 +122,7 @@ opacity: 0.8;
 			denverobesityLayer = L.geoJSON(data, 
 						       {style:style1, 
 						       onEachFeature:function(feature, layer) {
-							       layer.bindPopup("Average family income: " + feature.properties.PERCENT_OBESE_ + "%");
+							       layer.bindPopup("Percent Of Obese Adults: " + feature.properties.PERCENT_OBESE_ + "%");
 						       }}).addTo(map);
 
 			// move the map to the area of the data
